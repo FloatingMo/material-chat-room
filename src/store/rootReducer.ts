@@ -1,11 +1,6 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import
-
 const rootReducer = combineReducers({
-  chat: chatSlice,
-  auth: authSlice,
-  message: messageSlice,
-  user: userSlice,
+  chat: chatSlice.reducer,
+  user: userSlice.reducer,
 });
-
-export default rootReducer;
+export type RootState = ReturnType<typeof rootReducer>;
